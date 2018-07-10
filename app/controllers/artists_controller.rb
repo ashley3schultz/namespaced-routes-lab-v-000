@@ -12,6 +12,7 @@ class ArtistsController < ApplicationController
       redirect_to artists_path
     else
       @artist = Artist.new
+    end
   end
 
   def create
