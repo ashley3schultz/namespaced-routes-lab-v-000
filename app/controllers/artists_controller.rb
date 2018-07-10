@@ -8,7 +8,10 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if access == false
+      redirect_to artists_path
+    else 
+      @artist = Artist.new
   end
 
   def create
