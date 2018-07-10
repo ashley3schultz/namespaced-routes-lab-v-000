@@ -10,5 +10,5 @@ class Preference < ActiveRecord::Base
 
   def song_sort_order=(song_sort_order)
 
-  end 
+  end
 end
