@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    @artists = Artist.all.order(:name)
   end
 
   def show
@@ -8,7 +8,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    if access == false
+    if 
       redirect_to artists_path
     else
       @artist = Artist.new
