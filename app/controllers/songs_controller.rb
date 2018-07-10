@@ -5,7 +5,7 @@ class SongsController < ApplicationController
       if @artist.nil?
         redirect_to artists_path, alert: "Artist not found"
       else
-        @songs = @artist.songs.order(:name)
+        @songs = @artist.songs
       end
     else
       @songs = Song.all.order(:name)
