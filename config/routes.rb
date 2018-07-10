@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :preferences
   resources :artists do
     resources :songs, only: [:index, :show]
   end
   resources :songs
 
-  #namespaced :admin do
-  #  resources :
-  #end
+  namespaced :admin do 
+    resources :preferences
+  #end 
 
 end
