@@ -11,4 +11,7 @@ class Preference < ActiveRecord::Base
 
   def allow_create_artists=(allow_create_artists)
   end
+
+  def allow_create_songs(allow_create_songs)
+  end
 end
