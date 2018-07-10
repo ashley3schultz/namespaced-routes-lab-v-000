@@ -10,7 +10,7 @@ class ArtistsController < ApplicationController
   def new
     if access == false
       redirect_to artists_path
-    else 
+    else
       @artist = Artist.new
   end
 
